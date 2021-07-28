@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>VoluntYou | Official Homepage</title>
+  <link href="css/main.css" rel="stylesheet" />
+  <link href="res/bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="res/img/general/icon.png" rel="icon" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="VoluntYOU provides a better way to volunteer. We connect volunteers, community service organizations, and academic institutions on an accessible, collaborative platform that streamlines the volunteering process for all." />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DL7PY1G6N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-2DL7PY1G6N');
+  </script>
+
+</head>
+
+<body onscroll="navchange();">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" id="navigation"
+    style="transition-duration: 0.2s;">
+    <div class="container-fluid mx-5 p-0">
+      <a class="navbar-brand" href="#">
+        <!--<img src="res/img/general/icon.png" alt="VoluntYou icon"
+          style="vertical-align: top;">--> VoluntYOU
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">About Us</a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item d-lg-none" href="about/index.html" id="about">About</a></li>
+              <li class="dropdown-divider d-lg-none"></li>
+              <li><a class="dropdown-item" href="about/recognition.html">Recognition</a></li>
+              <li><a class="dropdown-item" href="about/team.html">Our Team</a></li>
+              <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a>
+              </li>
+            </ul>
+          </li>
+          <!--<li class="nav-item">
+                    <a class="nav-link" href="#">Team</a>
+                  </li>
+                  <!--
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                -->
+        </ul>
+        <!--form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+        <!--<div class="d-flex">
+          <div class="dropdown">
+            <a class="nav-link text-dark" href="#" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+              <img src="res/img/general/noaccount.png" alt="No account icon" width="40px">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+              <li><a class="dropdown-item" href="#">Login</a></li>
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+            </ul>
+          </div>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+
+  <div class="mx-5">
+    <div class="d-flex" style="height: calc(100vh - 7rem); background-color: var(--voluntyou-green);">
+
+      <div class="container-fluid my-auto w-100 h-100">
+
+        <div class="row w-100 h-100">
+          <div class="my-5 col-12 col-lg-6 my-lg-0 d-flex align-items-center justify-content-center text-center">
+            <div>
+              <!--style="background: url('res/img/general/VoluntYOU Hero.png') no-repeat center; background-size: 100%; width: 75%; height: 75%;"-->
+              <img src="res/img/home/HeroText.png" alt="VoluntYou Logo" width="80%" />
+              <!--=<a href="https://apps.apple.com/us/app/voluntyou/id1512204795" class="btn mt-4;"
+                style="font-size: 2vw; border-radius: 50px; color: white; padding-left: 50px; padding-right: 50px; font-weight: 500; position: absolute; bottom: 50%; right: 50%"
+                id="downloadbutton">DOWNLOAD</a>-->
+              <br>
+              <a href="https://apps.apple.com/us/app/voluntyou/id1512204795"><img src="res/img/home/appstore_badge.svg"
+                  alt="Download on the App Store" class="mt-1 d-none d-md-block float-right"
+                  style="float: right; width: 25%;"></a>
+              <a href="https://apps.apple.com/us/app/voluntyou/id1512204795"><img src="res/img/home/appstore_badge.svg"
+                  alt="Download on the App Store" class="mt-1 mx-auto d-md-none" style="width: 30%;"></a>
+            </div>
+            <!--<img src="res/img/general/VoluntYOU Hero.png" alt="VoluntYou Logo" width="75%" />
+              <h2 class="text-right" style="text-align:right;"><strong>A better way to volunteer</strong></h2>
+              <img src="res/img/general/voluntyoupaint.png" alt="VoluntYou Logo Paint" width="75%"/>
+              <br>
+              <a href="https://apps.apple.com/us/app/voluntyou/id1512204795" class="btn mt-4;"
+                style="font-size: 30pt; border-radius: 50px; color: white; padding-left: 50px; padding-right: 50px; font-weight: 500;"
+                id="downloadbutton">DOWNLOAD</a>-->
+          </div>
+          <div class="col-12 col-lg-6 d-none d-lg-flex justify-content-center align-items-center h-100">
+            <div class="d-flex float-center align-items-center h-100">
+              <!--View height need changing for mobile-->
+              <video class="d-flex float-center my-3 justify-content-center align-items-center" preload="auto"
+                style="height: 80%; border: .1rem solid black; border-radius: 2rem;" autoplay muted loop>
+                <source class="my-auto" type="video/mp4" src="res/img/general/Website Demo VoluntYOU.mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="row my-5" data-aos="slide-up">
+        <h2 class="mb-5 text-center">Volunteers</h2>
+        <div class="container w-50" data-aos="slide-up">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div alt="Student Profile" class="img-fluid" style="width: 100%" id="cycler_volunteer">
+                <img class="w-100" src="res/img/screenshots/Student Profile.jpg" alt="Volunteer Profile Page" />
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 bg-light p-0 mr-5" style="border-radius: 0.25rem;">
+              <div class="row">
+                <div class="col-12">
+                  <div class="btn-group w-100" role="group" aria-label="Volunteer Radio Buttons">
+                    <input type="radio" class="btn-check" name="radio_volunteer" id="btnradio1_volunteer"
+                      autocomplete="off" checked>
+                    <label class="btn btn-secondary m-0 selected" for="btnradio1_volunteer" controls="cycler_volunteer"
+                      textbox="cycletext_volunteer" image="res/img/screenshots/Student Profile.jpg"
+                      alt="Volunteer Profile Page"
+                      text="The Volunteer Profile is your home base. It’s where VoluntYOU keeps track of your aggregate statistics, such as the total hours you’ve spent volunteering and total number of events you’ve attended. It’s also where you can edit the information you share with community service organizations, such as your relevant skillset, when you request to attend their events.">Volunteer
+                      Profile</label>
+
+                    <input type="radio" class="btn-check" name="radio_volunteer" id="btnradio2_volunteer"
+                      autocomplete="off">
+                    <label class="btn btn-secondary m-0" for="btnradio2_volunteer" controls="cycler_volunteer"
+                      textbox="cycletext_volunteer" image="res/img/screenshots/Event on Student Volunteer Side.jpg"
+                      alt="Volunteer Event feed"
+                      text="The Event Feed is where you explore all the volunteering opportunities VoluntYOU has to offer. VoluntYOU speeds up your search by helping you filter and customize the events you browse based on your skills and interests. By selecting an event interested in, you can learn more about it and the nonprofit that’s running it. When you’ve found the right fit, request to attend with the click of a button.">Event
+                      Feed</label>
+
+                    <input type="radio" class="btn-check" name="radio_volunteer" id="btnradio3_volunteer"
+                      autocomplete="off">
+                    <label class="btn btn-secondary m-0" for="btnradio3_volunteer" controls="cycler_volunteer"
+                      textbox="cycletext_volunteer" image="res/img/screenshots/History.jpg"
+                      alt="Volunteer event history screen"
+                      text="The History tab maintains a detailed record of all your volunteering activities throughout your time on VoluntYOU: your past events, the events you’ve requested to attend, and your upcoming events. Clicking on any of the listed events will pull up the event details as they were when you signed up. ">Your
+                      History</label>
+
+                    <input type="radio" class="btn-check" name="radio_volunteer" id="btnradio4_volunteer"
+                      autocomplete="off">
+                    <label class="btn btn-secondary m-0 d-flex align-items-center" for="btnradio4_volunteer"
+                      controls="cycler_volunteer" textbox="cycletext_volunteer"
+                      image="res/img/screenshots/Schools to register under.jpg" alt="Schools tab"
+                      text="Through the schools tab, you can browse academic institutions near you and request to register as a student on their roster. Once approved, your academic institution will have access to a detailed PDF on the volunteering events you’ve completed, allowing them to accredit your extracurricular efforts in an instant.">Schools</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p id="cycletext_volunteer" class="p-3">The Volunteer Profile is your home base. It’s where
+                      VoluntYOU keeps
+                      track of your aggregate statistics, such as the
+                      total hours you’ve spent volunteering and total number of events you’ve attended. It’s also where
+                      you can edit the
+                      information you share with community service organizations, such as your relevant skillset, when
+                      you request to attend
+                      their events.</p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="row" data-aos="slide-up">
+                <div class="col-12 col-lg-4 d-flex justify-content-center">
+                  <img src="res/img/screenshots/NGO Profile seen on student side.jpg" alt="NGO Profile seen on student side" class="img-fluid" style="width: 15vw">
+                </div>
+                <div class="col-12 col-lg-4 d-flex justify-content-center">
+                  <img src="res/img/screenshots/Student Filtering Results.jpg" alt="Student Filtering Results" class="img-fluid" style="width: 15vw">
+                </div>
+                
+              </div>-->
+
+      <div class="row my-5" data-aos="slide-up">
+        <h2 class="mb-5 text-center">CSOs</h2>
+        <div class="container w-50" data-aos="slide-up">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div alt="Student Profile" class="img-fluid" style="width: 100%" id="cycler_cso">
+                <img class="w-100" src="res/img/screenshots/CSO Profile.jpg" alt="CSO Profile Page" />
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 bg-light p-0 mr-5" style="border-radius: 0.25rem;">
+              <div class="row">
+                <div class="col-12">
+                  <div class="btn-group w-100" role="group" aria-label="CSO Radio Buttons">
+                    <input type="radio" class="btn-check" name="radio_cso" id="btnradio1_cso" autocomplete="off"
+                      checked>
+                    <label class=" btn btn-secondary selected" for="btnradio1_cso" controls="cycler_cso"
+                      textbox="cycletext_cso" image="res/img/screenshots/CSO Profile.jpg" alt="CSO Profile Page"
+                      text="The CSO Profile is your main platform for connecting with volunteers on VoluntYOU. By providing a mission statement, location, and contact information, you share your purpose with a community of like-minded helpers.">CSO
+                      Profile</label>
+
+                    <input type="radio" class="btn-check" name="radio_cso" id="btnradio2_cso" autocomplete="off">
+                    <label class="btn btn-secondary m-0" for="btnradio2_cso" controls="cycler_cso"
+                      textbox="cycletext_cso" image="res/img/screenshots/Create Event View on CSO Side.jpg"
+                      alt="Create Event View for CSOs"
+                      text="When you create an event, you post your call for volunteers to our platform. This invite then appears on our volunteers’ Event Feed, instantly reaching a both local and international audience. After reviewing the information you’ve provided about how, when, and where this event will take place, volunteers can request to attend your event.">Create
+                      Event</label>
+
+                    <input type="radio" class="btn-check" name="radio_cso" id="btnradio3_cso" autocomplete="off">
+                    <label class="btn btn-secondary m-0" for="btnradio3_cso" controls="cycler_cso"
+                      textbox="cycletext_cso" image="res/img/screenshots/CSO Event Log.jpg" alt="CSO event history"
+                      text="The My Events page maintains a detailed history of the events you’ve held in the past and your upcoming events. By selecting a past event, you can review the event’s information and the volunteers who attended that event. By selecting an upcoming event, you can review requests to attend from volunteers.">My
+                      Events</label>
+
+                    <input type="radio" class="btn-check" name="radio_cso" id="btnradio4_cso" autocomplete="off">
+                    <label class="btn btn-secondary m-0" for="btnradio4_cso" controls="cycler_cso"
+                      textbox="cycletext_cso" image="res/img/screenshots/CSO Approving Volunteers.jpg"
+                      alt="CSO screen to approve volunteers"
+                      text="The Approve Volunteers page allows you to review the total hours, total events, and skillsets of the volunteers who have requested to attend your upcoming event. Based on this information, you approve and turn down offers from volunteers interested in helping out.">Approve
+                      Volunteers</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p id="cycletext_cso" class="p-3">The CSO Profile is your main platform for connecting with
+                      volunteers on VoluntYOU. By providing a mission statement,
+                      location, and contact information, you share your purpose with a community of like-minded helpers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-5" data-aos="slide-up">
+        <h2 class="mb-5 text-center">Academic Institutions</h2>
+        <div class="container w-50" data-aos="slide-up">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div alt="Student Profile" class="img-fluid" style="width: 100%" id="cycler_aca">
+                <img class="w-100" src="res/img/screenshots/Creating PDF Report for Schools.jpg" />
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 bg-light p-0 mr-5" style="border-radius: 0.25rem;">
+              <div class="row">
+                <div class="col-12">
+                  <div class="btn-group w-100" role="group" aria-label="Academic institution Radio Buttons">
+                    <input type="radio" class="btn-check" name="radio_aca" id="btnradio1_aca" autocomplete="off"
+                      checked>
+                    <label class=" btn btn-secondary selected" for="btnradio1_aca" controls="cycler_aca"
+                      textbox="cycletext_aca" image="res/img/screenshots/Creating PDF Report for Schools.jpg"
+                      alt="Academic Institutions Student Roster"
+                      text="Through the student roster, you review requests from VoluntYOU volunteers who would like to register as part of your academic institution. The requests you approve appear under the “Create PDF Report” button and are included in VoluntYOU’s auto-generated student report.">Student
+                      Roster</label>
+
+                    <input type="radio" class="btn-check" name="radio_aca" id="btnradio2_aca" autocomplete="off">
+                    <label class="btn btn-secondary m-0" for="btnradio2_aca" controls="cycler_aca"
+                      textbox="cycletext_aca" image="res/img/screenshots/School PDF Report on Students.jpg"
+                      alt="School PDF Report on Students"
+                      text="At the click of a button, VoluntYOU generates a detailed PDF report on your students’ volunteering activities. This report includes both aggregate statistics, such as total hours volunteered and total events attended, and a detailed record of all the events that make up said totals. This report is titled, dated, and ready for a signature, allowing you to accredit your students’ extracurricular efforts in a minute.">PDF
+                      Report</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p id="cycletext_aca" class="p-3">Through the student roster, you review requests from VoluntYOU
+                      volunteers who would like to register as part of your
+                      academic institution. The requests you approve appear under the “Create PDF Report” button and are
+                      included in
+                      VoluntYOU’s auto-generated student report.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center my-5" data-aos="zoom-in">
+    <!--Dimensions need changing for mobile-->
+    <iframe src="https://www.youtube.com/embed/QXVvSH6ITK0" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      style="width: 50vw; height: 30vw;" allowfullscreen></iframe>
+  </div>
+
+  <div class="container-fluid bg-light p-4">
+    <div class="mx-auto text-center" id="download">
+      <h2>Ready to try it out?</h2>
+      <a href="https://apps.apple.com/us/app/voluntyou/id1512204795"><img src="res/img/home/appstore_badge.svg"
+          alt="Download on the App Store" width="200px" class="mt-1"></a>
+    </div>
+  </div>
+
+  <div class="mx-5 mt-3">
+    <div class="container-fluid d-flex justify-content-center py-3">
+      <div class="row d-flex justify-content-center">
+
+        <div class="col-4">
+          <a href="https://www.facebook.com/voluntyou/"><img src="res/img/icons/facebook.png" alt="Facebook Icon"
+              height="40"></a>
+        </div>
+
+        <div class="col-4">
+          <a href="https://www.instagram.com/voluntyou"><img src="res/img/icons/instagram.png" alt="Instagram Icon"
+              height="40"></a>
+        </div>
+
+        <div class="col-4">
+          <a href="mailto:info@voluntyou.org"><img src="res/img/icons/email.png" alt="Email Icon" height="40"></a>
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="row my-3">
+      <p class="text-center">VoluntYOU is intellectual property and copyright of Julianna Schneider. All rights
+        reserved for all content on this website and VoluntYOU itself, this includes but is not limited to text,
+        trademarks, illustrations, photos, graphics, files, designs, arrangements, etc. Patent Pending.</p>
+    </div>
+  </div>
+
+  </div>
+
+
+
+  <script src="res/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="js/appdisp.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+
+    var navchange = function () {
+      if (window.scrollY > 0) {
+        document.getElementById('navigation').classList.add("shadow-sm");
+      }
+      else {
+        document.getElementById('navigation').classList.remove("shadow-sm");
+      }
+    }
+
+    var about = function () {
+      if ($("#about").css('display') == 'none') {
+        window.location.href = 'about/index.html';
+      }
+    }
+
+    btn = document.getElementById("navbarDropdown");
+    btn.addEventListener("show.bs.dropdown", about);
+
+  </script>
+
+</body>
+
+</html>

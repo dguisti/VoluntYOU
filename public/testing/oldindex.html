@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>VoluntYou | Official Homepage</title>
+  <link href="css/main.css" rel="stylesheet" />
+  <link href="res/bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="res/img/general/icon.png" rel="icon" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body onscroll="navchange();">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" id="navigation"
+    style="transition-duration: 0.2s;">
+    <div class="container-fluid mx-5 p-0">
+      <a class="navbar-brand" href="#">
+        <!--<img src="res/img/general/icon.png" alt="VoluntYou icon"
+          style="vertical-align: top;">--> VoluntYOU
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="privacy.html">Privacy Policy</a>
+          </li>
+          <!--<li class="nav-item">
+                    <a class="nav-link" href="#">Team</a>
+                  </li>
+                  <!--
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                -->
+        </ul>
+        <!--form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+        <!--<div class="d-flex">
+          <div class="dropdown">
+            <a class="nav-link text-dark" href="#" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+              <img src="res/img/general/noaccount.png" alt="No account icon" width="40px">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+              <li><a class="dropdown-item" href="#">Login</a></li>
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+            </ul>
+          </div>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+
+  <div class="mx-5">
+    <div class="d-flex" style="height: calc(100vh - 7rem); background-color: #9FE1C1;">
+
+      <div class="container-fluid my-auto w-100">
+
+        <div class="row w-100">
+          <div class="my-5 col-12 col-lg-6 my-lg-0 d-flex align-items-center justify-content-center text-center">
+            <div>
+              <!--style="background: url('res/img/general/VoluntYOU Hero.png') no-repeat center; background-size: 100%; width: 75%; height: 75%;"-->
+              <img src="res/img/home/HeroText.png" alt="VoluntYou Logo" width="75%" />
+              <a href="https://apps.apple.com/us/app/voluntyou/id1512204795" class="btn mt-4;"
+                style="font-size: 2vw; border-radius: 50px; color: white; padding-left: 50px; padding-right: 50px; font-weight: 500; position: absolute; bottom: 50%; right: 50%"
+                id="downloadbutton">DOWNLOAD</a>
+            </div>
+            <!--<img src="res/img/general/VoluntYOU Hero.png" alt="VoluntYou Logo" width="75%" />
+              <h2 class="text-right" style="text-align:right;"><strong>A better way to volunteer</strong></h2>
+              <img src="res/img/general/voluntyoupaint.png" alt="VoluntYou Logo Paint" width="75%"/>
+              <br>
+              <a href="https://apps.apple.com/us/app/voluntyou/id1512204795" class="btn mt-4;"
+                style="font-size: 30pt; border-radius: 50px; color: white; padding-left: 50px; padding-right: 50px; font-weight: 500;"
+                id="downloadbutton">DOWNLOAD</a>-->
+          </div>
+          <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+            <div class="float-center align-items-center">
+              <!--View height need changing for mobile-->
+              <video class="d-flex float-center my-3 justify-content-center align-items-center vh-50 vh-75-lg"
+                preload="auto" autoplay muted loop>
+                <source class="my-auto" type="video/mp4" src="res/img/general/Website Demo VoluntYOU.mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="container w-50" style="margin-top: 5rem" data-aos="slide-up">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div alt="Student Profile" class="img-fluid" style="width: 100%" id="cycler">
+              <img class="w-100" src="res/img/screenshots/Create Event View on NGO Side.jpg" />
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 bg-light p-0 mr-5" style="border-radius: 0.25rem;">
+            <div class="row">
+              <div class="col-12">
+                <div class="btn-group w-100" role="group" aria-label="Tab selection for app display">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                  <label class="btn btn-secondary" for="btnradio1" controls="cycler" textbox="cycletext"
+                    image="res/img/screenshots/Create Event View on NGO Side.jpg" alt=""
+                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla accumsan nulla sed semper. Nulla justo eros, aliquam ut efficitur at, tempor a tellus. Etiam sollicitudin, odio ultrices aliquet ultricies, lectus metus dapibus nulla, eget lacinia nunc orci vel urna. Suspendisse malesuada fringilla ante, non pellentesque nisl mattis non. Cras sit amet luctus neque. Etiam eu libero ac purus lacinia mollis in sed mauris. Vestibulum tempor pharetra tincidunt. Vivamus euismod ultricies felis sed porttitor. Donec blandit lobortis feugiat. In hac habitasse platea dictumst. Donec sit amet mi elit. Pellentesque lorem felis, venenatis a congue sed, venenatis at nisl. Nam id leo in mauris tincidunt finibus quis eget justo.">Image
+                    1</label>
+
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                  <label class="btn btn-secondary" for="btnradio2" controls="cycler" textbox="cycletext"
+                    image="res/img/screenshots/Creating PDF Report for Schools.jpg" alt="" text="Aliquam erat volutpat. Sed sagittis sem et sem molestie, eget mattis risus sollicitudin. In hac habitasse platea dictumst. Nunc mattis dui non egestas malesuada. Nam eget mauris nulla. Cras laoreet nunc quis tellus cursus, vitae auctor felis blandit. Praesent ac commodo diam. Nunc auctor sit amet purus nec mollis. Suspendisse vitae sapien at mauris convallis luctus. Proin ac magna ac mauris sodales maximus ut sed odio. Mauris consectetur pulvinar tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      
+      ">Image 2</label>
+
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                  <label class="btn btn-secondary" for="btnradio3" controls="cycler" textbox="cycletext"
+                    image="res/img/screenshots/School PDF Report on Students.jpg" alt="" text="Praesent sed est in risus pretium viverra. Vestibulum vestibulum ultrices turpis in imperdiet. Sed efficitur hendrerit eros, nec blandit nibh imperdiet ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut at elit ac justo porttitor bibendum vel sed ipsum. Quisque iaculis eros quam, ut fermentum mauris lobortis eget. Nullam tempus augue non leo vulputate imperdiet. Quisque arcu leo, rutrum nec iaculis eu, venenatis vel nisl. Cras consequat lectus vel leo maximus ultricies. Sed gravida diam ac odio imperdiet, sit amet molestie justo faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse nulla enim, luctus sit amet condimentum non, fermentum sed urna. Sed nec elit egestas sapien ultricies placerat quis vel magna. Nulla tincidunt enim vel purus pulvinar, vitae imperdiet magna fermentum.
+      
+      ">Image 3</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <p id="cycletext" class="p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus fringilla accumsan nulla sed semper. Nulla justo eros,
+                    aliquam ut efficitur at, tempor a tellus. Etiam sollicitudin, odio ultrices aliquet
+                    ultricies, lectus metus dapibus
+                    nulla, eget lacinia nunc orci vel urna. Suspendisse malesuada fringilla ante, non
+                    pellentesque nisl mattis non. Cras sit
+                    amet luctus neque. Etiam eu libero ac purus lacinia mollis in sed mauris. Vestibulum
+                    tempor pharetra tincidunt. Vivamus
+                    euismod ultricies felis sed porttitor. Donec blandit lobortis feugiat. In hac habitasse
+                    platea dictumst. Donec sit amet
+                    mi elit. Pellentesque lorem felis, venenatis a congue sed, venenatis at nisl. Nam id leo
+                    in mauris tincidunt finibus
+                    quis eget justo.</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="row text-center my-5" data-aos="slide-up">
+        <h2 class="mb-5">Volunteers</h2>
+        <div class="col-12 col-lg-4 d-flex justify-content-center">
+          <img src="res/img/screenshots/Student Profile.jpg" alt="Student Profile" class="img-fluid"
+            style="width: 15vw">
+        </div>
+        <div class="col-12 col-lg-4 d-flex justify-content-center">
+          <img src="res/img/screenshots/Event on Student Volunteer Side.jpg" alt="Event on Student Volunteer Side"
+            class="img-fluid" style="width: 15vw">
+        </div>
+        <div class="col-12 col-lg-4 d-flex justify-content-center">
+          <img src="res/img/screenshots/Schools to register under.jpg" alt="Schools to register under" class="img-fluid"
+            style="width: 15vw">
+        </div>
+      </div>
+      <!--<div class="row" data-aos="slide-up">
+                <div class="col-12 col-lg-4 d-flex justify-content-center">
+                  <img src="res/img/screenshots/NGO Profile seen on student side.jpg" alt="NGO Profile seen on student side" class="img-fluid" style="width: 15vw">
+                </div>
+                <div class="col-12 col-lg-4 d-flex justify-content-center">
+                  <img src="res/img/screenshots/Student Filtering Results.jpg" alt="Student Filtering Results" class="img-fluid" style="width: 15vw">
+                </div>
+                
+              </div>-->
+
+      <div class="row text-center my-5" data-aos="slide-up">
+        <h2 class="mb-5">NGOs</h2>
+        <div class="col-12 col-lg-4 d-flex justify-content-center">
+          <img src="res/img/screenshots/Create Event View on NGO Side.jpg" alt="Create Event View on NGO Side"
+            class="img-fluid" style="width: 15vw">
+        </div>
+        <div class="col-12 col-lg-4 d-flex justify-content-center">
+          <img src="res/img/screenshots/NGO Log of their own events.jpg" alt="NGO's Log of their own events"
+            class="img-fluid" style="width: 15vw">
+        </div>
+        <div class="col-12 col-lg-4 d-flex justify-content-center">
+          <img src="res/img/screenshots/NGO Approving Volunteers.jpg" alt="NGO Approving Volunteers" class="img-fluid"
+            style="width: 15vw">
+        </div>
+      </div>
+
+      <div class="row text-center my-5" data-aos="slide-up">
+        <h2 class="mb-5">Academic Institutions</h2>
+        <div class="col-12 col-lg-6 d-flex justify-content-center">
+          <img src="res/img/screenshots/Creating PDF Report for Schools.jpg" alt="Creating PDF Report for Schools"
+            class="img-fluid" style="width: 15vw">
+        </div>
+        <div class="col-12 col-lg-6 d-flex justify-content-center">
+          <img src="res/img/screenshots/School PDF Report on Students.jpg" alt="School PDF Report on Students"
+            class="img-fluid" style="width: 15vw">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center my-5" data-aos="zoom-in">
+    <!--Dimensions need changing for mobile-->
+    <iframe src="https://www.youtube.com/embed/QXVvSH6ITK0" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      style="width: 50vw; height: 30vw;" allowfullscreen></iframe>
+  </div>
+
+  <div class="container-fluid bg-light p-4">
+    <div class="mx-auto text-center" id="download">
+      <h2>Ready to try it out?</h2>
+      <a href="https://apps.apple.com/us/app/voluntyou/id1512204795"><img src="res/img/home/appstore_badge.svg"
+          alt="Download on the App Store" width="200px" class="mt-1"></a>
+    </div>
+  </div>
+
+  <div class="mx-5 mt-3">
+    <div class="container-fluid d-flex justify-content-center py-3">
+      <div class="row d-flex justify-content-center">
+
+        <div class="col-4">
+          <a href="https://www.facebook.com/voluntyou/"><img src="res/img/icons/facebook.png" alt="Facebook Icon"
+              height="40"></a>
+        </div>
+
+        <div class="col-4">
+          <a href="https://www.instagram.com/voluntyou"><img src="res/img/icons/instagram.png" alt="Instagram Icon"
+              height="40"></a>
+        </div>
+
+        <div class="col-4">
+          <a href="mailto:voluntyou.tech@gmail.com"><img src="res/img/icons/email.png" alt="Email Icon" height="40"></a>
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="row my-3">
+      <p class="text-center">VoluntYOU is intellectual property and copyright of Julianna Schneider. All rights
+        reserved for all content on this website and VoluntYOU itself, this includes but is not limited to text,
+        trademarks, illustrations, photos, graphics, files, designs, arrangements, etc.</p>
+    </div>
+  </div>
+
+  </div>
+
+
+  <script src="res/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+
+    var navchange = function () {
+      if (window.scrollY > 0) {
+        document.getElementById('navigation').classList.add("shadow-sm");
+      }
+      else {
+        document.getElementById('navigation').classList.remove("shadow-sm");
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

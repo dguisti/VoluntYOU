@@ -1,0 +1,78 @@
+:root {
+  --voluntyou-green: #9FE2BF;
+}
+
+* {
+    font-family: Lato, sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+.dropdown-menu {
+    box-shadow: 0 2px 16px 0 rgba(5,5,5,0.2);
+    border-radius: 1px !important;
+    border: 0 !important;
+}
+
+.list-unstyled li a {
+    text-decoration: none !important;
+}
+
+@media (min-width: 576px) {
+    .vh-50 {
+        height: 30vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .vh-75-lg {
+        height: 80vh;
+    }
+}
+
+#downloadbutton {
+    background: rgb(233,176,233);
+    background: linear-gradient(90deg, rgba(233,176,233,1) 0%, rgba(153,223,199,1) 100%);
+    /*background-image: url("../res/img/general/voluntyoupaint.png");
+    background-position: center;*/
+}
+
+label.btn.selected::before {
+  content: '';
+  position: absolute;
+  border: 15px solid transparent;
+  border-top: 0;
+  border-bottom-color: #f8f9fa;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(60%);
+}
+
+.btn-group label.btn {
+    margin: 0;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+.btn-secondary {
+    background-color: #FDC15A!important;
+    border-color: #FDC15A!important;
+}
+
+.btn-secondary:hover {
+    background-color: #e4ae51!important;
+    border-color: #e4ae51!important;
+}
+
+.btn-secondary.selected {
+    background-color: #b1873f!important;
+    border-color: #b1873f!important;
+}
