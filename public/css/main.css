@@ -62,6 +62,46 @@ label.btn.selected::before {
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
 
+@media all {
+    .phone-preview label {
+        font-size: 75%;
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+        overflow: hidden;
+        
+    }
+    .phone-preview {
+        width: 80%!important;
+    }
+
+    .phone-preview .img-fluid {
+        max-width: 70%;
+        margin: 0 auto 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .phone-preview label {
+        font-size: 100%;
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+        overflow: hidden;
+        
+    }
+
+    .phone-preview {
+        width: 70%!important;
+    }
+
+    .phone-preview .img-fluid {
+        max-width: 70%;
+        margin: 0 auto 0 auto;
+    }
+}
+
+
 .btn-secondary {
     background-color: #FDC15A!important;
     border-color: #FDC15A!important;
