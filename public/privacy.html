@@ -279,6 +279,32 @@
 
     </script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCaR8mps91fS_BdnLOJSDXHWfO-bDYpHDM",
+        authDomain: "volunteam-impact.firebaseapp.com",
+        databaseURL: "https://volunteam-impact.firebaseio.com",
+        projectId: "volunteam-impact",
+        storageBucket: "volunteam-impact.appspot.com",
+        messagingSenderId: "756388431441",
+        appId: "1:756388431441:web:49d01e4ef7fc51d07d5a70"
+      };
+      // Initialize Firebase
+      let initialized = firebase.initializeApp(firebaseConfig);
+      console.log(initialized);
+
+    </script>
+
 </body>
 
 </html>
