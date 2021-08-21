@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>VoluntYOU | Login</title>
+  <title>VoluntYOU | Register</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/main.css" rel="stylesheet" />
@@ -14,27 +14,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DL7PY1G6N"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-2DL7PY1G6N');
-  </script>
 
 </head>
 
-<body onscroll="navchange();">
+<body>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
 
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" id="navigation"
     style="transition-duration: 0.2s;">
     <div class="container-fluid mx-5 p-0">
-      <a class="navbar-brand" href="#">
-        <!--<img src="res/img/general/icon.png" alt="VoluntYou icon"
-        style="vertical-align: top;">--> VoluntYOU
+      <a class="navbar-brand" href="../#">
+        <!--<img src="../res/img/general/icon.png" alt="VoluntYou icon"
+            style="vertical-align: top;">--> VoluntYOU
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,79 +41,41 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item dropdown">
 
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">About Us</a>
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
 
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item d-lg-none" href="about/index.html" id="about">About</a></li>
               <li class="dropdown-divider d-lg-none"></li>
               <li><a class="dropdown-item" href="about/recognition.html">Recognition</a></li>
               <li><a class="dropdown-item" href="about/team.html">Our Team</a></li>
-              <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a>
+              <li><a class="dropdown-item active" href="#">Privacy Policy</a>
               </li>
             </ul>
           </li>
-          <!--<li class="nav-item">
-                  <a class="nav-link" href="#">Team</a>
-                </li>
-                <!--
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-              -->
         </ul>
-        <!--form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>-->
-        <!--<div class="d-flex">
-        <div class="dropdown">
-          <a class="nav-link text-dark" href="#" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            Account
-            <img src="res/img/general/noaccount.png" alt="No account icon" width="40px">
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
-            <li><a class="dropdown-item" href="#">Login</a></li>
-            <li><a class="dropdown-item" href="#">Account</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-          </ul>
-        </div>
-      </div>-->
       </div>
     </div>
   </nav>
-
-
   <div class="vh-100">
-    <div class="container py-5 h-100 ">
+    <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card shadow-2-strong d-flex flex-column" style="border-radius: 1rem;">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
 
-              <div class="mb md-5 mt-md-4 pb-5">
+              <div class="mb md-5 mt-md-4 ">
                 <div class="needs-validation" novalidate>
                   <div class="form-group ">
-                    <h3 class="mb-5">Login</h3>
+                    <h3 class="mb-5">Sign Up</h3>
 
                     <div class="form-outline mb-4">
                       <label for="email">Email</label>
-                      <input class="form-control form-control-lg" id="email" type="email" name="email" />
+                      <input class="form-control form-control-lg" id="Email" type="email" name="email" />
                     </div>
                     <div class="valid-feedback">Valid</div>
                     <div class="invalid-feedback">Please enter your email address</div>
@@ -124,21 +84,39 @@
                   <div class="form-group">
                     <div class="form-outline mb-4"></div>
                     <label for="pswd">Password</label>
-                    <input class="form-control form-control-lg" id="pswd" type="password" name="pswd" required />
+                    <input class="form-control form-control-lg" id="Pswd" type="password" name="pswd" required />
                     <div class="valid-feedback">Valid</div>
                   </div>
                   <div class="invalid-feedback">Please enter your password</div>
                 </div>
-                <div class="align-self-end mt-sm-4">
-                  <button id="btnLogin" class="btn btn-outline-light  btn-lg align-self-end"
-                    style="background-color:#9FE2BF">Login</button>
+                <div class="form-group">
+                  <div class="form-outline mb-4"></div>
+                  <label for="pswd">Re-enter your password</label>
+                  <input class="form-control form-control-lg" id="rePswd" type="password" name="rePswd" required />
+                  <div class="valid-feedback">Valid</div>
                 </div>
+                <div class="invalid-feedback">Please re-enter your password</div>
               </div>
+              <div class="checkbox mt-sm-4">
+                <a href="privacy.html">
+                  <input id="privacyCheckBox" type="checkbox" value="PrivacyPolicyRead"> I have read the Privacy Policy
+                </a>
+              </div>
+              <div class="align-self-end mt-sm-4">
+                <button id="btnSignIn" class="btn btn-outline-light  btn-lg " style="background-color:#9FE2BF">Sign
+                  Up</button>
+              </div>
+              <div class="align-self-end mt-sm-4">
+                <a href="login.html">Don't have an account? Register here.
+                  </button>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   </div>
 
@@ -176,32 +154,6 @@
     </footer>
 
   </footer>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-   https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyCaR8mps91fS_BdnLOJSDXHWfO-bDYpHDM",
-      authDomain: "volunteam-impact.firebaseapp.com",
-      databaseURL: "https://volunteam-impact.firebaseio.com",
-      projectId: "volunteam-impact",
-      storageBucket: "volunteam-impact.appspot.com",
-      messagingSenderId: "756388431441",
-      appId: "1:756388431441:web:49d01e4ef7fc51d07d5a70"
-    };
-    // Initialize Firebase
-    let initialized = firebase.initializeApp(firebaseConfig);
-    console.log(initialized);
-
-  </script>
-
-  <script src="js/login.js"></script>
   <script src="res/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -236,24 +188,42 @@
     btn.addEventListener("show.bs.dropdown", about);
 
   </script>
-  
+
+
 
   <script>
 
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCaR8mps91fS_BdnLOJSDXHWfO-bDYpHDM",
+      authDomain: "volunteam-impact.firebaseapp.com",
+      databaseURL: "https://volunteam-impact.firebaseio.com",
+      projectId: "volunteam-impact",
+      storageBucket: "volunteam-impact.appspot.com",
+      messagingSenderId: "756388431441",
+      appId: "1:756388431441:web:49d01e4ef7fc51d07d5a70"
+    };
+    // Initialize Firebase
+    let initialized = firebase.initializeApp(firebaseConfig);
+    console.log(initialized);
+        //checkAuthState();
 
-    firebase.auth().onAuthStateChanged((user) => {
+  </script>
 
+  <script src="js/registration.js"></script>
+  <script>
+    firebase.auth().onAuthStateChanged(user => {
+      window.user = user;
       if (user) {
-        var uid = user.uid;
-        console.log(uid);
-        window.location.href = "index.html";
-        // ...
-      } else {
-        // User is signed out
-        // ...
-      }
-    });
 
+
+        window.location.href = "index.html"; //After successful login, user will be redirected to index.html
+      }
+      else {
+        return;
+      }
+
+    });
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
       .then(() => {
         // Existing and future Auth states are now persisted in the current
@@ -264,12 +234,9 @@
         return firebase.auth().signInWithEmailAndPassword(email, password);
       })
       .catch((error) => {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+
       });
   </script>
-
 
 </body>
 
