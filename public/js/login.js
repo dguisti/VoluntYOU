@@ -9,7 +9,7 @@ btnLogin.addEventListener('click', e => {
   const password = userPassword.value;
   const auth = firebase.auth();
   //Checking if all fields have been populated
-  if (email != "" && password != "") {
+ // if (email != "" && password != "") {
     const promise = auth.signInWithEmailAndPassword(email, password);
     promise.catch(function (error) {
       const errorCode = error.code;
@@ -19,10 +19,10 @@ btnLogin.addEventListener('click', e => {
 
     });
     
-  }
-  else {
-    window.alert("Please fill out all fields.");
-  }
+ // }
+  // else {
+  //   window.alert("Please fill out all fields.");
+  // }
 });
 
 

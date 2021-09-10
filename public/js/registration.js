@@ -12,7 +12,7 @@ btnSignIn.addEventListener('click', e => {
     const password = userPassword.value;
     const checkPassword = checkUserPassword.value;
 //checking to make sure all fields have been filled
-    if (email != "" && password != "") {
+ //   if (email != "" && password != "") {
 //checking if the re-entered password matches the first password
         if (password === checkPassword) {
             //checking if the user has accepted the privacy policy
@@ -37,8 +37,8 @@ btnSignIn.addEventListener('click', e => {
             window.alert("Passwords do not match");
         }
 
-    }
-    else {
-        window.alert("Please fill out all fields.");
-    }
+  //  }
+    // else {
+    //     window.alert("Please fill out all fields.");
+    // }
 });
