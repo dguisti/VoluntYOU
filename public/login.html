@@ -87,13 +87,13 @@
           <div class="dropdown">
             <a class="nav-link text-dark" href="#" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               Account
-              <img src="res/img/general/noaccount.png" alt="No account icon" width="40px">
+              <img src="res/img/general/noaccount.png" clas="flex-shrink-2"alt="No account icon" width="40px">
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
               <li><a class="dropdown-item" href="login.html">Login</a></li>
               <li><a class="dropdown-item" href="registration.html">Sign Up</a></li>
               <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
             </ul>
           </div>
         </div>
@@ -128,10 +128,10 @@
                     </div>
                     <div class="align-self-end mt-sm-4">
 
-                      <button id="btnLogin" class="btn btn-outline-light  btn-lg align-self-end"
+                      <button id="btnLogin" class="btn btn-outline-light  btn-lg align-self-end m-5"
                         style="font-weight:bold; background-color:#9FE2BF ">Login</button>
                     </div>
-                    <div class="align-self-end mt-sm-4">
+                    <div class="align-self-end mt-5">
                       <a href="registration.html">Don't have an account? Register here.
 
                     </div>
@@ -248,7 +248,7 @@
         if (user) {
           var uid = user.uid;
           console.log(uid);
-          window.location.href = "index.html";
+          window.location.href = "profile.html";
           // ...
         } else {
           // User is signed out
