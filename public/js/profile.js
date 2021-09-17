@@ -1,24 +1,28 @@
+
+
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     var uid = user.uid;
     console.log(uid);
-    getUser(uid)
+    getUser(uid);
   } else {
-    // User is signed out
-    // ...
+
   }
 })
+
+
+//Log Out
 const logOutBtn = document.getElementById("LogOutBtn");
-logOutBtn.addEventListener("click",e=>{
+logOutBtn.addEventListener("click", e => {
   firebase.auth().signOut().then(() => {
     window.location.href = "Welcome.html";
   }).catch((error) => {
-    window.alert("An error occured "+error.message);
+    window.alert("An error occured " + error.message);
   });
 
 })
 
-
+//Get Current user UID
 function getUser(id) {
   db.collection("Volunteers").where("userUID", "==", id).get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
@@ -31,6 +35,8 @@ function getUser(id) {
 const profileInfo = document.getElementById("Profile");
 profileInfo.classList.add("m-3");
 const Skills = document.getElementById("Skills");
+
+//Render current user's profile info
 function renderProfile(doc) {
 
   let idElement = document.createElement("div");
@@ -40,9 +46,8 @@ function renderProfile(doc) {
   let hours = document.createElement("p");
   let events = document.createElement("p");
   //let userRating = document.createElement("img");
+
   const rating = doc.data()["User Rating"];
-
-
   idElement.setAttribute("data-id", doc.id);
   name.textContent = doc.data().Name;
   name.classList.add('mb-3');
@@ -57,6 +62,7 @@ function renderProfile(doc) {
   profileInfo.appendChild(idElement);
   Skills.appendChild(skills);
 
+  //Check user rating to display corresponding image
   if (rating == 1) {
     const curr = document.getElementById("gray1");
     curr.setAttribute("src", "res/img/general/InvolvementLevel/color-1.png");
@@ -74,6 +80,28 @@ function renderProfile(doc) {
     const curr = document.getElementById("gray4");
     curr.setAttribute("src", "res/img/general/InvolvementLevel/color-4.png");
   }
+
+  //Edit Profile
+  const editBtn = document.getElementById("EditBtn");
+  const field1 = document.getElementById("editName");
+  const field2 = document.getElementById("editAge");
+  const field3 = document.getElementById("editSkills");
+  const saveBtn = document.getElementById("SaveBtn");
+  editBtn.addEventListener("click", evt => {
+    console.log('clicked');
+    field1.setAttribute('value', doc.data().Name);
+    field2.setAttribute('value', doc.data().Age);
+    field3.value = doc.data().Skills;
+    field1.hidden = false;
+    field2.hidden = false;
+    field3.hidden = false;
+    saveBtn.hidden = false;
+
+    profileInfo.style.display = 'none';
+    Skills.style.display = 'none';
+
+
+  })
 
 
 }

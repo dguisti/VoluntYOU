@@ -105,8 +105,10 @@
             </div>
             <div class="col-6">
                 <div id="Profile"></div>
+                <input class="form-control form-control-md" type="text" id="editName" name="editName" hidden>
+                <input class="form-control form-control-md" type="text" id="editAge" name="editAge" hidden>
             </div>
-            <div class="col-2 mt-3 "><a style="float:right; text-decoration: none;" href="#">Edit</a></div>
+            <div class="col-2 mt-3 "><a id="EditBtn" style="float:right; text-decoration: none;" href="#">Edit</a></div>
         </div>
         <div><a style="float:right; text-decoration: none;" id="LogOutBtn" href="#">Log Out</a></div>
     </div>
@@ -130,7 +132,17 @@
 
     </div>
     <div class="container mt-5">
-        <h2 id="Skills">My Skills</h2>
+        <h2>My Skills</h2>
+        <div id="Skills"></div>
+        <div class="row">
+            <textarea rows="3" class="col w-100 m-3" id="editSkills" hidden></textarea>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button id="SaveBtn" class="btn btn-outline-light  btn-md align-self-end m-5"
+                    style="font-weight:bold; background-color:#9FE2BF " hidden>Save</button>
+            </div>
+        </div>
     </div>
     </div>
     <div class="mx-5 mt-3">
