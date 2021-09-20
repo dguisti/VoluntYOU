@@ -95,8 +95,7 @@
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
               <li><a class="dropdown-item" href="login.html">Login</a></li>
               <li><a class="dropdown-item" href="registration.html">Sign Up</a></li>
-              <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a id="hiddenProfileLi" class="dropdown-item" href="profile.html" hidden>Profile </a></li>
             </ul>
           </div>
         </div>
@@ -196,7 +195,6 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script src="js/appdisp.js"></script>
 
   <script>
     AOS.init();
@@ -224,6 +222,15 @@
 
   </script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+               https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
 
 
   <script>
@@ -244,6 +251,7 @@
         //checkAuthState();
 
   </script>
+  <script src="js/appdisp.js"></script>
 
 
 

@@ -56,3 +56,12 @@ for (btn of document.getElementsByTagName("label")) {
         }
     }
 }
+
+//Display Profile in Nav dropdown only if user is logged in
+const profileLi = document.getElementById("hiddenProfileLi");
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+     profileLi.hidden = false;
+    } else {
+    }
+  })

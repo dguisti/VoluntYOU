@@ -1,15 +1,11 @@
-
-
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     var uid = user.uid;
     console.log(uid);
     getUser(uid);
   } else {
-
   }
 })
-
 
 //Log Out
 const logOutBtn = document.getElementById("LogOutBtn");
