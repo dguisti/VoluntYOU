@@ -1,3 +1,5 @@
+//import  updateDoc  from "firebase/firestore";
+
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     var uid = user.uid;
@@ -24,7 +26,7 @@ function getUser(id) {
     snapshot.docs.forEach(doc => {
       console.log(Object.keys(doc.data()));
       // const docObj = Object.keys(doc.data());
-      renderProfile(doc);
+      renderProfile(doc,id);
     })
   });
 }
@@ -33,7 +35,7 @@ profileInfo.classList.add("m-3");
 const Skills = document.getElementById("Skills");
 
 //Render current user's profile info
-function renderProfile(doc) {
+function renderProfile(doc,uid) {
 
   let idElement = document.createElement("div");
   let name = document.createElement("h3");
@@ -96,8 +98,32 @@ function renderProfile(doc) {
     profileInfo.style.display = 'none';
     Skills.style.display = 'none';
 
+    saveBtn.addEventListener('click', function(e){
+      const updatedName = field1.value;
+      const updatedAge = field2.value;
+      const updatedSkills = field3.value;
+      console.log(updatedName);
+      let nameRef = db.collection("Volunteers").doc(uid);
+      nameRef.update({
+        "Name" : updatedName,
+        "Age": updatedAge,
+        "Skills": updatedSkills
+      }).then(function(r){
+        window.location.href="profile.html";
+      }).catch(function(e){
+        Window.alert("Error "+e+" Could not update your profile");
+      })
+    })
 
-  })
+  
+//   saveBtn.addEventListener('click',e=>{
+//   const nameRef = doc(db ,"Volunteers",name);
+//   await firebase.firestore.updateDoc(nameRef,{
+//     "Name" : field1.value
+//   });
+// });
+
+  });
 
 
 }
