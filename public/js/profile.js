@@ -10,7 +10,8 @@ firebase.auth().onAuthStateChanged((user) => {
 })
 
 //Log Out
-const logOutBtn = document.getElementById("LogOutBtn");
+//document.querySelector
+const logOutBtn = document.querySelector(".LogOutBtn");
 logOutBtn.addEventListener("click", e => {
   firebase.auth().signOut().then(() => {
     window.location.href = "Welcome.html";
