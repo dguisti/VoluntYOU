@@ -82,21 +82,29 @@ function renderProfile(doc,uid) {
   //Edit Profile
   const editBtn = document.getElementById("EditBtn");
   const field1 = document.getElementById("editName");
+  const editNameLabel = document.getElementById("editNameLabel");
   const field2 = document.getElementById("editAge");
+  const editAgeLabel = document.getElementById("editAgeLabel");
   const field3 = document.getElementById("editSkills");
   const saveBtn = document.getElementById("SaveBtn");
   editBtn.addEventListener("click", evt => {
     console.log('clicked');
+    editBtn.text = "Cancel";
     field1.setAttribute('value', doc.data().Name);
     field2.setAttribute('value', doc.data().Age);
     field3.value = doc.data().Skills;
     field1.hidden = false;
+    editNameLabel.hidden = false;
     field2.hidden = false;
+    editAgeLabel.hidden = false;
     field3.hidden = false;
     saveBtn.hidden = false;
-
     profileInfo.style.display = 'none';
     Skills.style.display = 'none';
+
+    editBtn.addEventListener('click', function(){
+      window.location.href = "profile.html";
+    })
 
     saveBtn.addEventListener('click', function(e){
       const updatedName = field1.value;
