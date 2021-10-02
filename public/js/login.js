@@ -16,7 +16,8 @@ btnLogin.addEventListener('click', e => {
       const errorMessage = error.message;
       window.alert("Error: " + errorMessage);
       console.log(errorCode);
-      userEmail.text='';
+      userEmail.value='';
+      userPassword.value='';
 
     });
     

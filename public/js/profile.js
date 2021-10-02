@@ -1,3 +1,4 @@
+$(document).ready(function() {
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     var uid = user.uid;
@@ -6,18 +7,22 @@ firebase.auth().onAuthStateChanged((user) => {
   } else {
   }
 })
+});
+
 
 //Log Out
 //document.querySelector
 const logOutBtn = document.querySelector(".LogOutBtn");
+$(document).ready(function(){ 
 logOutBtn.addEventListener("click", e => {
   firebase.auth().signOut().then(() => {
     window.location.href = "index.html";
   }).catch((error) => {
     window.alert("An error occured " + error.message);
   });
-
-})
+}
+);
+});
 
 //Get Current user UID
 function getUser(id) {
