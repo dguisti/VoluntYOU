@@ -1,5 +1,3 @@
-//import  updateDoc  from "firebase/firestore";
-
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     var uid = user.uid;
@@ -14,7 +12,7 @@ firebase.auth().onAuthStateChanged((user) => {
 const logOutBtn = document.querySelector(".LogOutBtn");
 logOutBtn.addEventListener("click", e => {
   firebase.auth().signOut().then(() => {
-    window.location.href = "Welcome.html";
+    window.location.href = "index.html";
   }).catch((error) => {
     window.alert("An error occured " + error.message);
   });

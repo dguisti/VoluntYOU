@@ -42,7 +42,7 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -98,6 +98,19 @@
             </ul>
           </div>
         </div>-->
+        <div class="d-flex">
+          <div class="dropdown">
+            <a class="nav-link text-dark" href="#" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+              <img src="res/img/general/noaccount.png" alt="No account icon" width="40px">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+              <li><a class="dropdown-item" href="login.html">Login</a></li>
+              <li><a class="dropdown-item" href="registration.html">Sign Up</a></li>
+              <li><a id="hiddenProfileLi" class="dropdown-item" href="profile.html" hidden>Profile </a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -388,7 +401,7 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script src="js/appdisp.js"></script>
+ 
 
   <script>
     AOS.init();
@@ -442,6 +455,8 @@
     console.log(initialized);
 
   </script>
+
+<script src="js/appdisp.js"></script>
 
 </body>
 
