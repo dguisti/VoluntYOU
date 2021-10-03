@@ -12,9 +12,10 @@ firebase.auth().onAuthStateChanged((user) => {
 
 //Log Out
 //document.querySelector
-const logOutBtn = document.querySelector(".LogOutBtn");
+
 $(document).ready(function(){ 
-logOutBtn.addEventListener("click", e => {
+document.querySelectorAll(".LogOutBtn").forEach(function(button){
+button.addEventListener("click", e => {
   firebase.auth().signOut().then(() => {
     window.location.href = "index.html";
   }).catch((error) => {
@@ -22,6 +23,7 @@ logOutBtn.addEventListener("click", e => {
   });
 }
 );
+});
 });
 
 //Get Current user UID
