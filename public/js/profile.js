@@ -5,6 +5,7 @@ firebase.auth().onAuthStateChanged((user) => {
     console.log(uid);
     getUser(uid);
   } else {
+    window.location.href = "registration.html";
   }
 })
 });
@@ -14,7 +15,7 @@ firebase.auth().onAuthStateChanged((user) => {
 //document.querySelector
 
 $(document).ready(function(){ 
-document.querySelectorAll(".LogOutBtn").forEach(function(button){
+document.querySelectorAll(".LogOutBtn").forEach((button)=>{
 button.addEventListener("click", e => {
   firebase.auth().signOut().then(() => {
     window.location.href = "index.html";

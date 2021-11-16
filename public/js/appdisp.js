@@ -58,10 +58,32 @@ for (btn of document.getElementsByTagName("label")) {
 }
 
 //Display Profile in Nav dropdown only if user is logged in
-const profileLi = document.getElementById("hiddenProfileLi");
-firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-     profileLi.hidden = false;
-    } else {
+
+
+  $(document).ready(function(){ 
+    const profileLi = document.getElementById("hiddenProfileLi");
+    const loginLi = document.getElementById("login-nav-dropdown");
+    const signinLi = document.getElementById("signup-nav-dropdown");
+    const logoutLi = document.getElementById("hiddenLogOutLi");
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            console.log('Hi jane');
+         profileLi.hidden = false;
+         logoutLi.hidden = false;
+         loginLi.hidden = true;
+         signinLi.hidden = true;
+        } else {
+        }
+      })
+      //Log out
+    document.querySelectorAll(".LogOutBtn").forEach((button)=>{
+    button.addEventListener("click", e => {
+      firebase.auth().signOut().then(() => {
+        window.location.href = "index.html";
+      }).catch((error) => {
+        window.alert("An error occured " + error.message);
+      });
     }
-  })
+    );
+    });
+    });
