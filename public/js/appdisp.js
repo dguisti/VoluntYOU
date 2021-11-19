@@ -67,7 +67,7 @@ for (btn of document.getElementsByTagName("label")) {
     const logoutLi = document.getElementById("hiddenLogOutLi");
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-            console.log('Hi jane');
+          // console.log('Hi jane');
          profileLi.hidden = false;
          logoutLi.hidden = false;
          loginLi.hidden = true;
