@@ -65,6 +65,7 @@ for (btn of document.getElementsByTagName("label")) {
     const loginLi = document.getElementById("login-nav-dropdown");
     const signinLi = document.getElementById("signup-nav-dropdown");
     const logoutLi = document.getElementById("hiddenLogOutLi");
+    const eventLi = document.getElementById("hiddenEventFeedLi");
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
           // console.log('Hi jane');
@@ -72,6 +73,7 @@ for (btn of document.getElementsByTagName("label")) {
          logoutLi.hidden = false;
          loginLi.hidden = true;
          signinLi.hidden = true;
+         eventLi.hidden= false;
         } else {
         }
       })
