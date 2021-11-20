@@ -8,12 +8,11 @@ currentDate.toLocaleDateString(options);
 console.log(currentDate);
 const db = firebase.firestore();
 const collectionRef = db.collection('Events');
+var str;
 
 
-var str = `<ul class="mt-3" style="list-style-type:none">`;
 $(document).ready(function () {
-    //displayAll();
-    displayOutdoorEvents();
+    displayAll();
 })
 
 // catch error
@@ -27,7 +26,7 @@ const displayError = (err) => {
     console.error(err);
 }
 //function to insert event html onto the page
-const display = (doc) => {
+const display = (doc,str) => {
     str += '<li>' + '<span class="py-1"style="font-weight:bold; background-color:#FDC15A;">' + doc.data()['Event Title'] + '</span>' +
         '<p class="m-3" style="font-size:0.75rem;">' + doc.data()['Time'].toDate() + '</p>' + '</li>' + '<hr>';
     return str;
@@ -38,12 +37,13 @@ const display = (doc) => {
 
 // function that displays all events 
 const displayAll = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
             // console.log(doc.data()['Event Title']);
             // eventDate = doc.data()['Time'];
             // console.log(eventDate);
-            str = display(doc);
+            str = display(doc,str);
 
 
         });
@@ -59,9 +59,10 @@ const displayAll = () => {
 
 //function that dsplays outdoor events
 const displayOutdoorEvents = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Outdoors').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);
@@ -73,9 +74,10 @@ const displayOutdoorEvents = () => {
 
 //function that dsplays indoor events
 const displayIndoorEvents = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Indoors').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);
@@ -87,9 +89,10 @@ const displayIndoorEvents = () => {
 
 //function that dsplays events involving animals
 const displayAnimalEvents = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Animals').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);
@@ -102,9 +105,10 @@ const displayAnimalEvents = () => {
 
 //function that dsplays events involving medical health care
 const displayMedicalEvents = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Medical').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);
@@ -116,9 +120,10 @@ const displayMedicalEvents = () => {
 
 //function that dsplays events involving the elderly
 const displayElderlyEvents = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Elderly').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);
@@ -130,9 +135,10 @@ const displayElderlyEvents = () => {
 
 //function that dsplays events involving children
 const displayChildrenEvents = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Children').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);
@@ -144,9 +150,10 @@ const displayChildrenEvents = () => {
 
 //function that dsplays events involving Learning Disabilities
 const displayLearningDisabilityEvents = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Learning Disability').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);
@@ -160,9 +167,10 @@ const displayLearningDisabilityEvents = () => {
 
 //function that dsplays events involving Physical Disabilities
 const displayPhysicalDisabilityEvents = () => {
+     str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Physical Disability').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);
@@ -174,9 +182,10 @@ const displayPhysicalDisabilityEvents = () => {
 
 //function that dsplays events involving Huanitarian Aid
 const displayHumanitarianAidEvents = () => {
+    str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Tags', 'array-contains', 'Humanitarian Aid').where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
-            str = display(doc);
+            str = display(doc,str);
         });
         str += '</ul>';
         // console.log(str);

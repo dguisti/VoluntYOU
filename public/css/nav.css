@@ -7,3 +7,6 @@
 .dropdown-divider {
     color: rgba(211,211,211,1) !important;
 }
+ul.category-dropdown li:hover{
+    cursor: pointer;
+}

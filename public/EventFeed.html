@@ -5,6 +5,7 @@
 
     <title>VoluntYOU | Official Homepage</title>
     <link href="css/main.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
     <link href="res/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="res/img/general/icon.png" rel="icon" type="image/png" />
 
@@ -126,10 +127,31 @@
         <div class=" flex-column d-flex justify-content-center align-items-center h-100">
             <div class="row" style=width:100%>
                 <div class="text-center">
-                    <button class="btn-lg btn btn-outline-light "
-                        style="font-weight: bold; background-color:#FD765F;margin:0 auto; align-content: center;">Select
-                        Category</button>
+                    <div class="dropdown">
+                        <button id="categoryDropdown"class="btn-lg btn btn-outline-light dropdown-toggle"
+                            style="font-weight: bold; background-color:#FD765F;margin:0 auto; align-content: center;"
+                            data-bs-toggle="dropdown" aria-expanded="false">Select
+                            Category</button>
+                        
+                            <ul class="category-dropdown dropdown-menu dropdown-menu-end">
+                            <div class="dropdown-header">Select Category</div>
+                                <li onclick=displayAll() class="dropdown-item">All</li>
+                            
+                                <li onclick= displayOutdoorEvents() class="dropdown-item">Outdoors</li>
+                                <li onclick= displayIndoorEvents() class="dropdown-item">Indoors</li>
+                                <li onclick= displayAnimalEvents() class="dropdown-item">Animals</li> 
+                                <li onclick= displayMedicalEvents() class="dropdown-item">Medical</li>
+                                <li onclick= displayElderlyEvents() class="dropdown-item">Elderly</li>
+                                <li onclick= displayChildrenEvents() class="dropdown-item">Children</li>
+                                <li onclick= displayLearningDisabilityEvents() class="dropdown-item">Learning Diability</li>
+                                <li onclick= displayPhysicalDisabilityEvents class="dropdown-item">Physical Disability<lia>
+                                <li onclick= displayHumanitarianAidEvents() class="dropdown-item">Humanitarian Aid</li>
+                                </ul>
+                        
+                    </div>
                 </div>
+            
+                
                 <div id="event-list">
 
                     <!-- <ul class="mt-3 " id="event-list">
@@ -216,6 +238,7 @@
         }
 
         btn = document.getElementById("navbarDropdown");
+        
         btn.addEventListener("show.bs.dropdown", about);
 
     </script>
