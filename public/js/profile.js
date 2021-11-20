@@ -66,9 +66,9 @@ function renderProfile(doc,uid) {
   idElement.append(name, age, hours, events);
   profileInfo.appendChild(idElement);
   Skills.appendChild(skills);
-
+  console.log("rating");
   //Check user rating to display corresponding image
-  if (rating == 1) {
+  if (rating == 1|| !rating) {
     const curr = document.getElementById("gray1");
     curr.setAttribute("src", "res/img/general/InvolvementLevel/color-1.png");
     //curr.style.display = "none";
