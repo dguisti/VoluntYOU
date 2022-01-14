@@ -117,3 +117,9 @@ label.btn.selected::before {
     border-color: #b1873f!important;
 }
 
+@media(min-width:992px){
+    #requestBtn{
+        width: 40%;
+
+    }
+}

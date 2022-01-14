@@ -1,4 +1,5 @@
 var currentDate = new Date();
+console.log(currentDate);
 const options = {
     month: 'numeric',
     day: 'numeric',
@@ -13,7 +14,8 @@ var str;
 
 $(document).ready(function () {
     displayAll();
-})
+    _addEventListeners();
+});
 
 // catch error
 const displayError = (err) => {
@@ -27,8 +29,11 @@ const displayError = (err) => {
 }
 //function to insert event html onto the page
 const display = (doc,str) => {
-    str += '<li>' + '<span class="py-1"style="font-weight:bold; background-color:#FDC15A;">' + doc.data()['Event Title'] + '</span>' +
-        '<p class="m-3" style="font-size:0.75rem;">' + doc.data()['Time'].toDate() + '</p>' + '</li>' + '<hr>';
+    var date = doc.data()['Time'].toDate();
+    // date = Date.parse(date);
+    // console.log(date);
+    str += `<li class="eventTitles" data-attribute="${ doc.data()['Event Title']}">` + '<span class="py-1" style="font-weight:bold; background-color:#FDC15A;">' + doc.data()['Event Title'] + '</span>' +
+        '<p class="m-3" style="font-size:0.75rem;">' + date.toLocaleString() + '</p>' + '</li>' + '<hr>';
     return str;
 
 }
@@ -37,6 +42,7 @@ const display = (doc,str) => {
 
 // function that displays all events 
 const displayAll = () => {
+
     str = `<ul class="mt-3" style="list-style-type:none">`;
     collectionRef.where('Time', '>', currentDate).get().then((snapshot) => {
         snapshot.docs.forEach((doc) => {
@@ -54,6 +60,7 @@ const displayAll = () => {
     }).catch(err => {
         displayError(err);
     });
+
 
 }
 
@@ -193,4 +200,21 @@ const displayHumanitarianAidEvents = () => {
     }).catch((err) => {
         displayError(err);
     })
+}
+
+const _addEventListeners = function(){
+    var listBody = document.getElementById('event-list');
+    // console.log(events);
+    listBody.addEventListener('click', (event)=>{
+        if(event.target.classList.contains("eventTitles")){
+            const title = event.target.getAttribute("data-attribute")
+            console.log(title);
+            localStorage.setItem("title",title);
+            window.location.href = "EventInformation.html";
+            
+        }
+        
+
+    })
+    
 }
