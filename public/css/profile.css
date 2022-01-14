@@ -1,0 +1,5 @@
+@media (min-width: 992px) {
+    .LogOutBtn {
+        display:none;
+    }
+}
