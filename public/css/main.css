@@ -1,5 +1,6 @@
 :root {
   --voluntyou-green: #9FE2BF;
+  --voluntyou-orange: #FDC15A;
 }
 
 * {
@@ -115,4 +116,8 @@ label.btn.selected::before {
 .btn-secondary.selected {
     background-color: #b1873f!important;
     border-color: #b1873f!important;
+}
+
+.card {
+    padding: 1em;
 }

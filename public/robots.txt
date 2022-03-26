@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /testing/
+Disallow: /about/involvement.html
 
 Sitemap: https://voluntyou.org/sitemap.xml
